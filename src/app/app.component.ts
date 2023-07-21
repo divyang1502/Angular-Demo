@@ -8,4 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Divyang';
   int = 2;
+  getName(name: string){
+    console.log('Your name is '+name);
+  }
 }
