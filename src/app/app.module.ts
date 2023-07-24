@@ -11,6 +11,9 @@ import { StudenstListComponent } from './studenst-list/studenst-list.component';
 import { FormsModule } from '@angular/forms';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { ChildComponent } from './child/child.component';
+import { UsdInrPipe } from './pipes/usd-inr.pipe';
+import { FormComponent } from './form/form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,6 +22,8 @@ import { ChildComponent } from './child/child.component';
     StudentListComponent,
     StudenstListComponent,
     ChildComponent,
+    UsdInrPipe,
+    FormComponent,
 
   ],
   imports: [
@@ -27,6 +32,7 @@ import { ChildComponent } from './child/child.component';
     UserAuthModule,
     FormsModule,
     MatSlideToggleModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

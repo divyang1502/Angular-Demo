@@ -42,5 +42,13 @@ export class AppComponent {
     {name:"vasim",email:"vasim@gmail.com"},
     {name:"bansi",email:"bansi@gmail.com"},
     {name:"nirmal",email:"nirmal@gmail.com"}
-  ]
+  ];
+  parent="Parent";
+  updateData(item:string){
+    console.log(item);
+    this.parent=item;
+  }
+  name:any;
+  pipes:string="Hello My name is Divyang";
+  today = Date();
 }

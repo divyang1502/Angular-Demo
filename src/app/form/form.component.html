@@ -1,0 +1,71 @@
+<!-- <h1>Form Control</h1>
+<form class="col-6 m-5" #sampleForm="ngForm" (ngSubmit)=submitForm(sampleForm.value)>
+  <fieldset>
+    <div class="form-group mt-3">
+      <label>First Name</label>
+      <input type="text" class="form-control" name="first_name" ngModel/>
+    </div>
+
+    <div class="form-group mt-3">
+      <label>Last Name</label>
+      <input type="text" class="form-control" name="last_name" ngModel/>
+    </div>
+  </fieldset>
+
+  <div class="form-group mt-3">
+    <label>Email</label>
+    <input type="email" class="form-control" name="email" ngModel/>
+  </div>
+
+  <div class="form-group mt-3">
+    <label>Password</label>
+    <input type="password" class="form-control" name="password" ngModel/>
+  </div>
+
+  <div class="form-group mt-3">
+    <label>Language</label>
+    <select class="form-control" name="language" ngModel>
+      <option disabled selected>Please select a language</option>
+      <option *ngFor="let lang of langs" [value]="lang"> {{lang}} </option>
+    </select>
+  </div>
+  <div class="form-group mt-3">
+    <button class="btn btn-primary" type="submit"> Submit </button>    
+  </div>
+</form> -->
+
+<h1>Reactive form Control</h1>
+<form class="col-6 m-5" [formGroup]="sampleForm" (ngSubmit)="submitData()">
+  <fieldset>
+    <div class="form-group mt-3">
+      <label>First Name</label>
+      <input type="text" class="form-control" name="first_name" formControlName="first_name" />
+    </div>
+
+    <div class="form-group mt-3">
+      <label>Last Name</label>
+      <input type="text" class="form-control" name="last_name" formControlName="last_name"/>
+    </div>
+  </fieldset>
+
+  <div class="form-group mt-3">
+    <label>Email</label>
+    <input type="email" class="form-control" name="email" formControlName="email"/>
+  </div>
+
+  <div class="form-group mt-3">
+    <label>Password</label>
+    <input type="password" class="form-control" name="password" formControlName="password"/>
+  </div>
+
+  <div class="form-group mt-3">
+    <label>Language</label>
+    <select class="form-control" name="language" formControlName="language">
+      <option disabled selected>Please select a language</option>
+      <option *ngFor="let lang of langs" [value]="lang"> {{lang}} </option>
+    </select>
+  </div>
+  <div class="form-group mt-3">
+    <button class="btn btn-primary" type="submit"> Submit </button>    
+  </div>
+</form>

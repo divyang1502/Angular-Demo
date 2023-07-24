@@ -57,6 +57,27 @@
   </ul>
 </div> -->
 
-<div class="m-5">
+<!-- <div class="m-5">
   <h1>Child to parent pass data!.</h1>
-</div>
+  {{parent}}
+  <app-child (updateDataEvent)="'updateData($event)'"></app-child>
+</div> -->
+
+<!-- <div class="m-5">
+  <h1>Two way binding!.</h1>
+  <input type="text" [(ngModel)]="name">
+  <h3>{{name}}</h3>
+</div> -->
+
+<!-- <div class="m-5">
+  <h1>Pipes in typescript!.</h1>
+  <h1>{{pipes|uppercase}}</h1>
+  <h1>{{pipes|lowercase}}</h1>
+  <h1>{{today|date}}</h1>
+  <h1>{{today|date:"fullDate"}}</h1>
+  <h1>{{0020000.35369784574|number:"3.3-5"}}</h1>
+  <h1>{{52000|currency:"INR"}}</h1>
+  <h1>Custom Pipe.</h1>
+  <h3>{{20|usdInr:72}}</h3>
+</div> -->
+<app-form></app-form>
