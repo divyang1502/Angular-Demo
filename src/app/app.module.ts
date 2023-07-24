@@ -8,19 +8,25 @@ import { HelloComponent } from './hello/hello.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { StudentListComponent } from './student-list/student-list.component';
 import { StudenstListComponent } from './studenst-list/studenst-list.component';
-
+import { FormsModule } from '@angular/forms';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { ChildComponent } from './child/child.component';
 @NgModule({
   declarations: [
     AppComponent,
     HelloComponent,
     UserListComponent,
     StudentListComponent,
-    StudenstListComponent
+    StudenstListComponent,
+    ChildComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    UserAuthModule
+    UserAuthModule,
+    FormsModule,
+    MatSlideToggleModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

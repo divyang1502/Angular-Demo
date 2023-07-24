@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -10,5 +11,36 @@ export class AppComponent {
   int = 2;
   getName(name: string){
     console.log('Your name is '+name);
+  };
+  color="red";
+  updateColor(){
+    (this.color == "green")? this.color = "red" : this.color = "green";
   }
+  userData:any = {};
+  getData(data:NgForm){
+    this.userData = data;
+  }
+
+  display=true;
+  toggle(){
+    this.display=!this.display;
+  }
+  list:any[]= [];
+  addTask(data:string){
+    this.list.push({id:this.list.length,name:data});
+  }
+  removeElement(id:number){
+    this.list=this.list.filter(item=>item.id!=id);
+  }
+
+  data=10;
+  updateChild(){
+    this.data=Math.floor(Math.random()*100);
+  }
+  users=[
+    {name:"Divyang",email:"divyang@gmail.com"},
+    {name:"vasim",email:"vasim@gmail.com"},
+    {name:"bansi",email:"bansi@gmail.com"},
+    {name:"nirmal",email:"nirmal@gmail.com"}
+  ]
 }

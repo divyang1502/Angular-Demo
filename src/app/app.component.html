@@ -1,4 +1,4 @@
-<h1>Hello World</h1>
+<!-- <h1>Hello World</h1>
 <h1>{{title}}</h1>
 <h1>{{int}}</h1>
   <ul class="heroes">
@@ -18,4 +18,45 @@
 <button (click)="getName('Divyang')"><h1>Click Me</h1></button>
 <br><br>
 <input type="text" #name (keyup)="getName(name.value)">
-<input type="text" #name1 (blur)="getName(name1.value)">
+<input type="text" #name1 (blur)="getName(name1.value)"> -->
+<!-- <h1>Styale Binding!..</h1> -->
+<!-- <h1 [style.color]="color"> Hello Kem cho!. </h1>
+<button (click)="updateColor()"> Click </button> -->
+<!-- <h1>Form Control!..</h1>
+<form #basicForm="ngForm" (ngSubmit)="getData(basicForm.value)">
+  <input type="text" ngModel name="name" placeholder="Enter name"><br> <br>
+  <input type="text" ngModel name="email" placeholder="Enter email"><br> <br>
+  <input type="text" ngModel name="phone" placeholder="Enter phone no"><br> <br>
+  <button>Submit</button>
+</form>
+<p>User name : {{userData.name}}</p>
+<p>User email : {{userData.email}}</p>
+<p>User phone : {{userData.phone}}</p> -->
+<!-- <h1>Toggle</h1>
+<button (click)="toggle()" class="btn btn-danger m-5"> Click </button>
+<h2 *ngIf="display">Hide and show this element !...</h2>
+
+<mat-slide-toggle>Toggle me!</mat-slide-toggle> -->
+<!-- <div class="m-5">
+<h1>Todo List!</h1>
+<input type="text" name="tudu" #task placeholder="Enter new task." >
+<button class="btn btn-danger m-5" (click)="addTask(task.value)"> Add task </button>
+<ul *ngFor="let item of list">
+  <li>{{item.name}} <button (click)="removeElement(item.id)" class="btn btn-danger p-1">Remove</button></li>
+</ul> 
+</div> -->
+
+<!-- <div class="m-5">
+  <app-child [item]="data"></app-child>
+  <button (click)="updateChild()" class="btn btn-danger p-1"  >Update</button>
+</div> -->
+
+<!-- <div class="m-5">
+  <ul *ngFor="let user of users">
+    <app-child [item]="user"></app-child>
+  </ul>
+</div> -->
+
+<div class="m-5">
+  <h1>Child to parent pass data!.</h1>
+</div>
