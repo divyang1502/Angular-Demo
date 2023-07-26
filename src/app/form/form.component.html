@@ -34,17 +34,19 @@
   </div>
 </form> -->
 
-<h1>Reactive form Control</h1>
+<h1 RedEl>Reactive form Control</h1>
 <form class="col-6 m-5" [formGroup]="sampleForm" (ngSubmit)="submitData()">
   <fieldset>
     <div class="form-group mt-3">
       <label>First Name</label>
       <input type="text" class="form-control" name="first_name" formControlName="first_name" />
+      <span *ngIf="firstName && firstName.invalid && firstName.touched">This field is required.</span>
     </div>
 
     <div class="form-group mt-3">
       <label>Last Name</label>
       <input type="text" class="form-control" name="last_name" formControlName="last_name"/>
+      <span [ngStyle]="spanStyle" *ngIf="lastName && lastName.invalid && lastName.touched">This field is required.</span>
     </div>
   </fieldset>
 
@@ -66,6 +68,6 @@
     </select>
   </div>
   <div class="form-group mt-3">
-    <button class="btn btn-primary" type="submit"> Submit </button>    
+    <button class="btn btn-primary" type="submit" [disabled]="!sampleForm.valid"> Submit </button>    
   </div>
 </form>

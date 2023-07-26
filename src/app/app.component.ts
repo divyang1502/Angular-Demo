@@ -1,12 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
+import { UserDataService } from './service/user-data.service'
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  userDatas:any;
+  constructor(public userDataService: UserDataService){
+    userDataService.users().subscribe((data)=>{
+      this.userDatas=data,
+      console.log("data", data);
+    });
+  };
+  
   title = 'Divyang';
   int = 2;
   getName(name: string){
@@ -51,4 +61,17 @@ export class AppComponent {
   name:any;
   pipes:string="Hello My name is Divyang";
   today = Date();
+
+  canSave:string='';
+  isUnchanged:string='';
+  isSpecial:string='';
+  currentStyles: Record<string, string> = {};
+  setCurrentStyles() {
+  this.currentStyles = {
+    'font-style':  this.canSave      ? 'italic' : 'normal',
+    'font-weight': !this.isUnchanged ? 'bold'   : 'bold',
+    'font-size':   this.isSpecial    ? '24px'   : '12px',
+    'color': 'red',
+  };
+}
 }

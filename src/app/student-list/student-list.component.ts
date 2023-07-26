@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-student-list',
   template: `
     <p>
-      this is a inline template component!
+      this is a inline template component student 2!
     </p>
   `,
   styleUrls: ['./student-list.component.css']

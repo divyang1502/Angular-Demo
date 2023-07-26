@@ -80,4 +80,40 @@
   <h1>Custom Pipe.</h1>
   <h3>{{20|usdInr:72}}</h3>
 </div> -->
-<app-form></app-form>
+<!-- <app-form></app-form> -->
+<!-- <div [ngStyle]="currentStyles">
+  This div is initially italic, normal weight, and extra large (24px).
+</div> -->
+
+<a routerLink="" class=" m-2"> Home </a>
+<a routerLink="form" class="m-2"> Form </a>
+<a routerLink="login" class="m-2"> Login </a>
+<a routerLink="hello" class="m-2"> Hello </a>
+<a routerLink="hello/1" class="m-2"> Hello 1 </a>
+<a routerLink="about" class="m-2"> About </a>
+<router-outlet></router-outlet>
+
+<div class="m-5">
+  <h1>Api calling data!.</h1>
+    <div>
+      <table>
+        <tr>
+          <td>Id</td>
+          <td>name</td>
+          <td>user name</td>
+          <td>email</td>
+          <td>phone</td>
+          <td>webSite</td>
+        </tr>
+        <tr *ngFor="let user of userDatas">
+          <td>{{user.id}}</td>
+          <td>{{user.name}}</td>
+          <td>{{user.username}}</td>
+          <td>{{user.email}}</td>
+          <td>{{user.phone}}</td>
+          <td>{{user.webSite}}</td>
+        </tr>
+      </table>
+    </div>
+</div>
+<app-footer></app-footer>
