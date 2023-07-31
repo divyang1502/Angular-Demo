@@ -107,6 +107,10 @@
     }
   },
   "cli": {
-    "analytics": false
+    "analytics": false,
+    "cache": {
+      "enabled": false,
+      "environment": "all"
+    }
   }
 }
