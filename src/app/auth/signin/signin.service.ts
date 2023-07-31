@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Subscription, catchError, count, interval, map, throwError } from 'rxjs';
+import { environment } from 'src/environments/environment.development';
 
 interface authResponseData{
     idToken: string;
@@ -17,7 +18,7 @@ export class AuthService {
   constructor(private http:HttpClient) { }
     
   signUp(email:string, password:string){
-    return this.http.post<authResponseData>('https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=',
+    return this.http.post<authResponseData>('https://identitytoolkit.googleapis.com/v1/accounts:signUp?key={{environment.FIREBASE_API_KEY}}',
     {
         email: email,
         password: password,
@@ -25,7 +26,7 @@ export class AuthService {
     });
   }
   loginUp(email:string, password:string){
-    return this.http.post<authResponseData>('https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyBLfJP3f8rYTuhueuT8KRyJ4ZMLKOrkyLc',
+    return this.http.post<authResponseData>('https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key={{environment.FIREBASE_API_KEY}}',
     {
         email: email,
         password: password,
