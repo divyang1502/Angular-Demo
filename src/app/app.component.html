@@ -91,9 +91,9 @@
 <a routerLink="hello" class="m-2"> Hello </a>
 <a routerLink="hello/1" class="m-2"> Hello 1 </a>
 <a routerLink="about" class="m-2"> About </a>
-<router-outlet></router-outlet>
+<!-- <router-outlet></router-outlet> -->
 
-<div class="m-5">
+<!-- <div class="m-5">
   <h1>Api calling data!.</h1>
     <div>
       <table>
@@ -115,5 +115,41 @@
         </tr>
       </table>
     </div>
+</div> -->
+<!-- <div class="m-5">
+  <form class="col-6 m-5" [formGroup]="postForm" (ngSubmit)="submitPostData()">
+      <div class="form-group mt-3">
+        <label>Post Name</label>
+        <input type="text" class="form-control" name="post_name" formControlName="post_name" />
+      </div>
+  
+      <div class="form-group mt-3">
+        <label>Description</label>
+        <textarea name="description" id="" cols="30" rows="5" class="form-control" formControlName="description"></textarea>
+      </div>
+    <div class="form-group mt-3">
+      <button class="btn btn-primary" type="submit" [disabled]="postForm.invalid"> Submit </button>    
+    </div>
+  </form>
 </div>
-<app-footer></app-footer>
+<div class="form-group mt-3">
+  <button class="btn btn-danger m-5" (click)="clearPosts()"> Clear Post </button>    
+</div>
+<div class="row">
+  <div class="col-xs-12 col-md-6 col-md-offset-3 mx-5">
+    <p *ngIf="loadPosts.length < 1 && !isFeching">Post Not Aviable!.</p>
+    <ul class="list-group" *ngIf="loadPosts.length > 1 && !isFeching">
+      <li class="list-group-item" *ngFor="let post of loadPosts">
+        <h1>{{post['post_name']}}</h1>
+        <p>{{post['description']}}</p>
+      </li>
+    </ul>
+    <p *ngIf="isFeching && !error"> Loading !.....</p>
+    <div class="alert alert-danger" *ngIf="error">
+      <h1>Error occure!</h1>
+      <p>{{error}}</p>
+    </div>
+  </div>
+</div> -->
+<app-signin></app-signin>
+<!-- <app-footer></app-footer> -->

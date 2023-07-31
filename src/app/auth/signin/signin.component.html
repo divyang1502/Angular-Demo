@@ -1,0 +1,31 @@
+<h1>Sign up page!</h1>
+<form class="col-6 m-5" #signupForm="ngForm" (ngSubmit)=submitForm(signupForm)>
+  <div class="form-group mt-3">
+    <label>Email</label>
+    <input type="email" class="form-control" name="email" ngModel required/>
+  </div>
+
+  <div class="form-group mt-3">
+    <label>Password</label>
+    <input type="password" class="form-control" name="password" ngModel required/>
+  </div>
+  <div class="form-group mt-3">
+    <button class="btn btn-primary" type="submit" [disabled]="signupForm.invalid"> Sign In </button>    
+  </div>
+</form>
+<hr>
+<h1>Login up page!</h1>
+<form class="col-6 m-5" #loginForm="ngForm" (ngSubmit)=LoginForm(loginForm)>
+  <div class="form-group mt-3">
+    <label>Email</label>
+    <input type="email" class="form-control" name="email" ngModel required/>
+  </div>
+
+  <div class="form-group mt-3">
+    <label>Password</label>
+    <input type="password" class="form-control" name="password" ngModel required/>
+  </div>
+  <div class="form-group mt-3">
+    <button class="btn btn-primary" type="submit" [disabled]="loginForm.invalid"> Sign In </button>    
+  </div>
+</form>

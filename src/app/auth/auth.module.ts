@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SigninComponent } from './signin/signin.component';
 import { PasswordComponentComponent } from './password-component/password-component.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -11,7 +12,13 @@ import { PasswordComponentComponent } from './password-component/password-compon
     PasswordComponentComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule,
+  ],
+  exports: [
+    SigninComponent
   ]
 })
-export class AuthModule { }
+export class AuthModule {
+  
+ }

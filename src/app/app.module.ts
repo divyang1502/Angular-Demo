@@ -19,6 +19,7 @@ import { RedElDirective } from './directive/red-el.directive';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './footer/footer.component';
+import { AuthModule } from './auth/auth.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,6 +44,7 @@ import { FooterComponent } from './footer/footer.component';
     FormsModule,
     MatSlideToggleModule,
     ReactiveFormsModule,
+    AuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]
